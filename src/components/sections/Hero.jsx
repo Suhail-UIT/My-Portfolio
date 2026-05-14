@@ -126,7 +126,7 @@ const Hero = () => {
               </MotionButton>
 
               <MotionButton
-                onClick={() => window.open("https://vercel.com/mannbond007s-projects", "_blank")}
+                onClick={() => window.open("https://vercel.com/suhail-khan-s-projects2", "_blank")}
                 className="bg-gradient-to-br from-zinc-800 to-zinc-950 border border-zinc-700/50 text-white shadow-lg shadow-black/20 px-8 py-2 rounded font-medium flex items-center gap-2 hover:border-zinc-500 transition-all hover:shadow-zinc-800/20"
               >
                 <svg viewBox="0 0 1155 1000" fill="currentColor" className="w-3.5 h-3.5">
