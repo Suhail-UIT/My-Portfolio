@@ -1,7 +1,7 @@
 // src/sections/ResumeButton.jsx
 export default function ResumeButton({ onClick, fullWidth = false }) {
   return (
-    <a href="/vivek_resume.pdf" download onClick={onClick}>
+    <a href="/SuhailNew2.0_resume (1).pdf" download onClick={onClick}>
       <div
         className={`
           relative group overflow-hidden
