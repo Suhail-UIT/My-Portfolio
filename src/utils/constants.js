@@ -1,0 +1,57 @@
+export const PERSONAL_INFO = {
+  name: "Suhail Khan",
+  title: "Full Stack Developer",
+  email: "suhail6676khan@gmail.com",
+  location: "Dehradun, Uttarakhand, India",
+  tagline: "Building modern, scalable, and user-focused web applications",
+  resume: "/SuhailNew2.0_resume (1).pdf",
+  bio: [
+    "I am a passionate Full Stack Developer with a strong focus on building clean, responsive, and scalable web applications using React and modern web technologies.",
+    "My expertise spans frontend development with React and Tailwind CSS, as well as backend development using Node.js, Express, and MongoDB.",
+    "When I am not coding, you can find me learning new technologies, contributing to projects, or improving my problem-solving skills.",
+  ],
+};
+
+export const SOCIAL_LINKS = {
+  github: "https://github.com/Suhail-UIT",
+  linkedin: "https://www.linkedin.com/in/suhail-khan-a8011432b/",
+  twitter: "https://x.com/SuhailK63914821",
+  dribbble: "https://dribbble.com/suhail6676khane",
+};
+
+export const STATS = [
+  {
+    label: "Years of Hands-on Development",
+    value: "3+",
+  },
+  {
+    label: "Production-Grade Projects",
+    value: "20+",
+  },
+  {
+    label: "Technologies & Frameworks",
+    value: "15+",
+  },
+  {
+    label: "Full-Stack Applications Built",
+    value: "10+",
+  },
+];
+
+
+export const ABOUT_STATS = [
+    {label: 'Happy Clients', value: '10+'},
+    {label: 'Code Commits', value: '2.5k+'},
+    {label: 'Github Stars', value: '500+'},
+    
+];
+
+export const NAV_LINKS = [
+    {id: 'about', label: 'About'},
+    {id: 'skills', label: 'Skills'},
+    {id: 'projects', label: 'Projects'},
+    {id: 'services', label: 'Services'},
+    {id: 'contact', label: 'Contact'},
+
+
+];

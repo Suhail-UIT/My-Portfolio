@@ -1,0 +1,157 @@
+import React, { useEffect, useState } from "react";
+import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
+
+const Footer = () => {
+  const [showTopBtn, setShowTopBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopBtn(window.scrollY > 300);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <footer className="relative bg-black border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Brand */}
+          <div>
+            <a href="#" className="group">
+              <span
+                className="
+                  font-mono text-lg md:text-xl font-semibold
+                  text-gray-300 tracking-wider
+                  transition-colors duration-300
+                  group-hover:text-white
+                "
+              >
+                <span className="text-primary">$</span> Suhail_
+              </span>
+            </a>
+
+            <p className="text-white/60 mt-2 text-sm leading-relaxed max-w-sm">
+              Full-stack developer crafting modern, scalable, and meaningful
+              digital experiences with a strong focus on usability and clarity.
+            </p>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h4 className="text-white font-medium mb-4">Navigation</h4>
+
+            <ul className="space-y-3 text-sm">
+              {[
+                { label: "About", href: "#about" },
+                { label: "Skills", href: "#skills" },
+                { label: "Projects", href: "#projects" },
+                { label: "Experience", href: "#experience" },
+                { label: "Contact", href: "#contact" },
+              ].map((link, i) => (
+                <li key={i}>
+                  <a
+                    href={link.href}
+                    className="
+                      group relative inline-block
+                      text-white/60 transition
+                      hover:text-white
+                    "
+                  >
+                    {link.label}
+                    <span
+                      className="
+                        absolute left-0 -bottom-1
+                        w-0 h-[1px]
+                        bg-primary
+                        transition-all duration-300
+                        group-hover:w-full
+                      "
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h4 className="text-white font-medium mb-4">Connect</h4>
+
+            <div className="flex items-center gap-4">
+              {[
+                { Icon: Github, href: "https://github.com/Suhail-UIT" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/feed/" },
+                { Icon: Twitter, href: "https://twitter.com/" },
+                { Icon: Mail, href: "mailto:vivek.dev@email.com" },
+              ].map(({ Icon, href }, i) => (
+                <a
+                  key={i}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="
+                    w-11 h-11
+                    flex items-center justify-center
+                    rounded-full
+                    bg-primary/15
+                    border border-primary/30
+                    text-primary
+                    hover:bg-primary/25
+                    hover:scale-105
+                    transition
+                  "
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/10 my-10" />
+
+        {/* Bottom */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50">
+          <span>© {new Date().getFullYear()} Suhail. All rights reserved.</span>
+          <span className="text-center md:text-right">
+            Designed with intent. Built for real-world impact.
+          </span>
+        </div>
+      </div>
+
+      {/* Scroll To Top Button */}
+      {showTopBtn && (
+        <button
+          onClick={scrollToTop}
+          aria-label="Scroll to top"
+          className="
+            fixed bottom-6 right-6 z-50
+            w-12 h-12
+            rounded-full
+            bg-primary text-black
+            flex items-center justify-center
+            shadow-lg
+            hover:scale-110
+            transition
+            cursor-pointer
+          "
+        >
+          <ArrowUp className="w-5 h-5" />
+        </button>
+      )}
+    </footer>
+  );
+};
+
+export default Footer;
